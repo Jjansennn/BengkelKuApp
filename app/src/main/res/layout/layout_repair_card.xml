@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <!-- Status & Workshop -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Repairing"
+                android:textColor="#F5A623"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text_workshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="in Bintang Automotive"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/text_eta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55 mins"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <!-- Car Info -->
+        <TextView
+            android:id="@+id/text_car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kona Electric"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_alignParentBottom="true" />
+
+        <!-- Car Image -->
+        <ImageView
+            android:id="@+id/image_car"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/konaelectric"
+            android:contentDescription="Car image" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

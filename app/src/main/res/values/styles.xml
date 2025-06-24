@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Style tema utama -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- warna utama dsb -->
+    </style>
+
+    <!-- Style khusus untuk EditText OTP -->
+    <style name="OtpBoxStyle">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/edittext_otp_box</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+</resources>

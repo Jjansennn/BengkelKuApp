@@ -12,14 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.bengkelkuapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_workshop"
+        android:name="com.example.bengkelkuapp.ui.WorkshopFragment"
+        android:label="@string/title_workshop"
+        tools:layout="@layout/fragment_workshop" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.bengkelkuapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_status"
+        android:name="com.example.bengkelkuapp.ui.StatusFragment"
+        android:label="@string/title_status"
+        tools:layout="@layout/fragment_status" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.bengkelkuapp.ui.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
 </navigation>
