@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="0dp">
 
             <!-- Welcome Text -->
             <LinearLayout
@@ -43,15 +43,25 @@
                     android:textColor="#F5A623"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/text_find_and_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/find_and_book"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
             </LinearLayout>
 
             <!-- Notification Icon -->
             <ImageView
                 android:id="@+id/ic_notification"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_notifications_black_24dp"
-                android:layout_marginEnd="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingTop="12dp"
+                android:src="@drawable/notificon"
                 app:layout_constraintEnd_toStartOf="@id/ic_profile"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
@@ -115,7 +125,7 @@
             android:textStyle="bold"
             android:textColor="#000000" />
 
-        <include layout="@layout/layout_garage_card" />
+        <include layout="@layout/item_garage_card" />
 
         <!-- Mechanics Map -->
         <TextView
@@ -147,21 +157,46 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:scrollbars="none"
             android:overScrollMode="never"
-            android:scrollbars="none">
+            android:layout_marginTop="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingEnd="8dp">
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle"
+                android:dividerPadding="8dp">
 
-                <include layout="@layout/item_tip_card" />
-                <include layout="@layout/item_tip_card" />
-                <include layout="@layout/item_tip_card" />
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/tips1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_card_rounded" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_card_rounded"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tips2" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/tips3"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_card_rounded" />
             </LinearLayout>
         </HorizontalScrollView>
+
+
 
     </LinearLayout>
 </ScrollView>
