@@ -10,8 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tips_sample" />
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:layout_width="wrap_content"

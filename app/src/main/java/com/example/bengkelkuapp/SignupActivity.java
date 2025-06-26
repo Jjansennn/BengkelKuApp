@@ -1,24 +1,53 @@
 package com.example.bengkelkuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.widget.AppCompatButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
 
 public class SignupActivity extends AppCompatActivity {
+
+    ImageView btnBack;
+    AppCompatButton btnSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide(); // Hilangkan ActionBar
+        }
+
+        btnBack = findViewById(R.id.btnBack);
+        btnSignup = findViewById(R.id.btnSignup);
+
+        // Tombol Back ke Landing
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(SignupActivity.this, LandingActivity.class);
+            startActivity(intent);
+            finish(); // Opsional: tutup SignupActivity
+        });
+
+        // Tombol Sign Up ke Login
+        btnSignup.setOnClickListener(v -> {
+            Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Opsional: tutup SignupActivity
+        });
+
+        RadioGroup rgVerification = findViewById(R.id.rgVerification);
+
+        rgVerification.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == R.id.rbEmail || checkedId == R.id.rbSms) {
+                Intent intent = new Intent(SignupActivity.this, VerificationActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }
