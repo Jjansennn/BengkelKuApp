@@ -5,27 +5,58 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/navigation_home">
 
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.bengkelkuapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
 
+        <!-- Action ke Garage Fragment -->
+        <action
+            android:id="@+id/action_home_to_garage"
+            app:destination="@id/navigation_garage" />
+    </fragment>
+
+    <!-- Workshop Fragment -->
     <fragment
         android:id="@+id/navigation_workshop"
         android:name="com.example.bengkelkuapp.ui.WorkshopFragment"
         android:label="@string/title_workshop"
         tools:layout="@layout/fragment_workshop" />
 
+    <!-- Status Fragment -->
     <fragment
         android:id="@+id/navigation_status"
         android:name="com.example.bengkelkuapp.ui.StatusFragment"
         android:label="@string/title_status"
         tools:layout="@layout/fragment_status" />
 
+    <!-- Profile Fragment -->
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.bengkelkuapp.ui.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <!-- Garage Fragment -->
+    <fragment
+        android:id="@+id/navigation_garage"
+        android:name="com.example.bengkelkuapp.ui.GarageFragment"
+        android:label="Garage"
+        tools:layout="@layout/fragment_garage">
+
+        <!-- Action ke Garage Detail Fragment -->
+        <action
+            android:id="@+id/action_garageFragment_to_garageDetailFragment"
+            app:destination="@id/navigation_garage_detail" />
+    </fragment>
+
+    <!-- Garage Detail Fragment -->
+    <fragment
+        android:id="@+id/navigation_garage_detail"
+        android:name="com.example.bengkelkuapp.ui.GarageDetailFragment"
+        android:label="Garage Detail"
+        tools:layout="@layout/fragment_garage_detail" />
+
 </navigation>
