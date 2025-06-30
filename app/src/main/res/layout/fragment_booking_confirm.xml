@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bookingConfirmRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Blur Background -->
+    <ImageView
+        android:id="@+id/blur_background"
+        android:layout_width="373dp"
+        android:layout_height="640dp"
+        android:contentDescription="blurred background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sc" />
+
+    <!-- Main Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Success Icon -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/succcess"
+                android:contentDescription="Success"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Confirmed"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:textColor="#F5A623"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your booking is confirmed"
+                android:textColor="#A0A0A0"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Workshop Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <!-- LEFT: Workshop Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bintang Automotive"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Address with icon -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginEnd="4dp"
+                                android:src="@drawable/iconlokasi" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jl. Bintang No 66J, Medan"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- RIGHT: Date and Time -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <!-- Date -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:text="Date"
+                                android:textColor="#999999"
+                                android:textSize="13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="18 Jun"
+                                android:textColor="#F5A623"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:layout_marginStart="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <!-- Time -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+                                android:text="Time"
+                                android:textColor="#999999"
+                                android:textSize="13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="14:00"
+                                android:textColor="#F5A623"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:layout_marginStart="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Car Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/creta" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:text="Creta N Line"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="Notes:\nMy car makes a strange noise every time I start the engine"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Confirm Button -->
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="40dp"
+                android:text="CONTINUE"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/btn_orange_rounded" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

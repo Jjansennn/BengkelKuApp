@@ -23,7 +23,33 @@
         android:id="@+id/navigation_workshop"
         android:name="com.example.bengkelkuapp.ui.WorkshopFragment"
         android:label="@string/title_workshop"
-        tools:layout="@layout/fragment_workshop" />
+        tools:layout="@layout/fragment_workshop">
+
+        <!-- Action ke Booking Fragment -->
+        <action
+            android:id="@+id/action_workshopFragment_to_bookingFragment"
+            app:destination="@id/navigation_booking" />
+    </fragment>
+
+    <!-- Booking Fragment -->
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.example.bengkelkuapp.ui.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_booking">
+
+        <!-- Action ke Booking Confirm Fragment -->
+        <action
+            android:id="@+id/action_bookingFragment_to_bookingConfirmFragment"
+            app:destination="@id/navigation_booking_confirm" />
+    </fragment>
+
+    <!-- Booking Confirm Fragment -->
+    <fragment
+        android:id="@+id/navigation_booking_confirm"
+        android:name="com.example.bengkelkuapp.ui.BookingConfirmFragment"
+        android:label="Booking Confirm"
+        tools:layout="@layout/fragment_booking_confirm" />
 
     <!-- Status Fragment -->
     <fragment
@@ -58,5 +84,4 @@
         android:name="com.example.bengkelkuapp.ui.GarageDetailFragment"
         android:label="Garage Detail"
         tools:layout="@layout/fragment_garage_detail" />
-
 </navigation>
