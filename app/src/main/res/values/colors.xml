@@ -10,4 +10,11 @@
     <color name="splashGradient">#FEC445</color>
     <color name="chip_background">#F2F2F2</color>
     <color name="chip_border">#CCCCCC</color>
+    <color name="merah">#C31E1E</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="secondary">#FF4081</color>
+    <color name="orange_primary">#F44336</color>
+    <color name="orange">#FF9800</color>
+    <color name="green">#1AA92A</color>
 </resources>

@@ -11,8 +11,6 @@
         android:name="com.example.bengkelkuapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
-
-        <!-- Action ke Garage Fragment -->
         <action
             android:id="@+id/action_home_to_garage"
             app:destination="@id/navigation_garage" />
@@ -24,8 +22,6 @@
         android:name="com.example.bengkelkuapp.ui.WorkshopFragment"
         android:label="@string/title_workshop"
         tools:layout="@layout/fragment_workshop">
-
-        <!-- Action ke Booking Fragment -->
         <action
             android:id="@+id/action_workshopFragment_to_bookingFragment"
             app:destination="@id/navigation_booking" />
@@ -37,8 +33,6 @@
         android:name="com.example.bengkelkuapp.ui.BookingFragment"
         android:label="Booking"
         tools:layout="@layout/fragment_booking">
-
-        <!-- Action ke Booking Confirm Fragment -->
         <action
             android:id="@+id/action_bookingFragment_to_bookingConfirmFragment"
             app:destination="@id/navigation_booking_confirm" />
@@ -56,14 +50,43 @@
         android:id="@+id/navigation_status"
         android:name="com.example.bengkelkuapp.ui.StatusFragment"
         android:label="@string/title_status"
-        tools:layout="@layout/fragment_status" />
+        tools:layout="@layout/fragment_status">
+        <action
+            android:id="@+id/action_statusFragment_to_statusDetailFragment"
+            app:destination="@id/navigation_status_detail" />
+    </fragment>
+
+    <!-- Status Detail Fragment -->
+    <fragment
+        android:id="@+id/navigation_status_detail"
+        android:name="com.example.bengkelkuapp.ui.StatusDetailFragment"
+        android:label="Status Detail"
+        tools:layout="@layout/fragment_status_detail">
+        <action
+            android:id="@+id/action_statusDetailFragment_to_statusFragment"
+            app:destination="@id/navigation_status" />
+    </fragment>
 
     <!-- Profile Fragment -->
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.bengkelkuapp.ui.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_profileUser"
+            app:destination="@id/navigation_profile_user" />
+        <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <!-- Profile User Fragment -->
+    <fragment
+        android:id="@+id/navigation_profile_user"
+        android:name="com.example.bengkelkuapp.ui.ProfileUserFragment"
+        android:label="Profile User"
+        tools:layout="@layout/fragment_profile_user" />
 
     <!-- Garage Fragment -->
     <fragment
@@ -71,8 +94,6 @@
         android:name="com.example.bengkelkuapp.ui.GarageFragment"
         android:label="Garage"
         tools:layout="@layout/fragment_garage">
-
-        <!-- Action ke Garage Detail Fragment -->
         <action
             android:id="@+id/action_garageFragment_to_garageDetailFragment"
             app:destination="@id/navigation_garage_detail" />

@@ -12,12 +12,13 @@
         android:title="@string/title_workshop" />
 
     <item
-        android:id="@+id/navigation_status"
+        android:id="@+id/navigation_status_detail"
         android:icon="@drawable/navbarstatus"
-        android:title="@string/title_status" />
+        android:title="Status" />
+
 
     <item
-        android:id="@+id/navigation_Profile"
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/navbarprofile"
         android:title="@string/title_profile" />
 
