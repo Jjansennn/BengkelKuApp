@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +14,7 @@ import androidx.navigation.Navigation;
 
 import com.example.bengkelkuapp.R;
 
-public class WorkshopFragment extends Fragment {
+public class WorkshopDetailsFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -22,12 +22,12 @@ public class WorkshopFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public WorkshopFragment() {
+    public WorkshopDetailsFragment() {
         // Required empty public constructor
     }
 
-    public static WorkshopFragment newInstance(String param1, String param2) {
-        WorkshopFragment fragment = new WorkshopFragment();
+    public static WorkshopDetailsFragment newInstance(String param1, String param2) {
+        WorkshopDetailsFragment fragment = new WorkshopDetailsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,21 +47,20 @@ public class WorkshopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout
-        return inflater.inflate(R.layout.fragment_workshop, container, false);
+        return inflater.inflate(R.layout.fragment_workshop_details, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Temukan layout item "Bintang Automotive"
-        LinearLayout layoutBintang = view.findViewById(R.id.layout_bintang_automotive);
+        // Temukan tombol Book di layout
+        Button bookButton = view.findViewById(R.id.btn_book_now);
 
-        // Tambahkan aksi klik untuk navigasi ke WorkshopDetailFragment
-        layoutBintang.setOnClickListener(v -> {
+        // Saat tombol diklik, navigasi ke BookingFragment
+        bookButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_workshopFragment_to_workshopDetailFragment);
+            navController.navigate(R.id.action_workshopDetailsFragment_to_bookingFragment);
         });
     }
 }

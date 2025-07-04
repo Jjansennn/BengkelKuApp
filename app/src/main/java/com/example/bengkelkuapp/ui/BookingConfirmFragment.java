@@ -5,11 +5,14 @@ import android.graphics.Shader;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.bengkelkuapp.R;
 
@@ -26,12 +29,17 @@ public class BookingConfirmFragment extends Fragment {
         ImageView blurBackground = view.findViewById(R.id.blur_background);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            // Android 12+ pakai RenderEffect
             RenderEffect blur = RenderEffect.createBlurEffect(20f, 20f, Shader.TileMode.CLAMP);
             blurBackground.setRenderEffect(blur);
         } else {
-            // Untuk Android < 12: pakai alpha saja sebagai fallback
-            blurBackground.setAlpha(0.6f);
+            blurBackground.setAlpha(0.6f); // Fallback untuk Android < 12
         }
+
+        // Tombol "Continue"
+        Button btnContinue = view.findViewById(R.id.btn_continue);
+        btnContinue.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(view);
+            navController.navigate(R.id.navigation_workshop); // Kembali ke WorkshopFragment
+        });
     }
 }

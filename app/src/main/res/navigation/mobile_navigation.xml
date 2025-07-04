@@ -16,6 +16,17 @@
             app:destination="@id/navigation_garage" />
     </fragment>
 
+    <!-- Search Fragment -->
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.bengkelkuapp.ui.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_workshopFragment"
+            app:destination="@id/navigation_workshop" />
+    </fragment>
+
     <!-- Workshop Fragment -->
     <fragment
         android:id="@+id/navigation_workshop"
@@ -24,6 +35,20 @@
         tools:layout="@layout/fragment_workshop">
         <action
             android:id="@+id/action_workshopFragment_to_bookingFragment"
+            app:destination="@id/navigation_booking" />
+        <action
+            android:id="@+id/action_workshopFragment_to_workshopDetailFragment"
+            app:destination="@id/navigation_workshop_detail" />
+    </fragment>
+
+    <!-- Workshop Detail Fragment -->
+    <fragment
+        android:id="@+id/navigation_workshop_detail"
+        android:name="com.example.bengkelkuapp.ui.WorkshopDetailsFragment"
+        android:label="Workshop Detail"
+        tools:layout="@layout/fragment_workshop_details">
+        <action
+            android:id="@+id/action_workshopDetailsFragment_to_bookingFragment"
             app:destination="@id/navigation_booking" />
     </fragment>
 
@@ -54,7 +79,6 @@
         <action
             android:id="@+id/action_statusFragment_to_statusDetailFragment"
             app:destination="@id/navigation_status_detail" />
-        <!-- ✅ Tambahkan action ke MessageFragment -->
         <action
             android:id="@+id/action_statusFragment_to_messageFragment"
             app:destination="@id/navigation_message" />
@@ -127,4 +151,5 @@
         android:name="com.example.bengkelkuapp.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
+
 </navigation>

@@ -32,10 +32,16 @@ public class HomeFragment extends Fragment {
                 "<font color='#000000'> near you</font>";
         binding.textTrusted.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_COMPACT));
 
-        // Temukan tombol 'Your Garage' dari layout include
+        // Navigasi ke Garage ketika tombol Your Garage diklik
         TextView yourGarageButton = root.findViewById(R.id.your_garage_button);
         yourGarageButton.setOnClickListener(v ->
                 Navigation.findNavController(root).navigate(R.id.action_home_to_garage)
+        );
+
+        // Navigasi ke SearchFragment saat EditText search diklik
+        binding.search.setFocusable(false); // Supaya tidak langsung muncul keyboard
+        binding.search.setOnClickListener(v ->
+                Navigation.findNavController(root).navigate(R.id.navigation_search)
         );
 
         return root;

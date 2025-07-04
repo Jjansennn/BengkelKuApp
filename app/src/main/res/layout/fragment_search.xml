@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#FFFFFF">
+
+    <!-- Main Content Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
+
+            <!-- Header Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/baseline_arrow_back_ios_new_24" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your location"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Jl. Veteran No 66A, Medan"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/btn_white_border_gray"
+                android:layout_marginTop="12dp">
+
+
+                <ImageView
+                    android:id="@+id/ivSearchIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/search"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/ivSearchIcon"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Search workshop"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:textColor="#333333"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/ivFilterSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/logofilter" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearest"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_bintang_automotive"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:background="@drawable/btn_white_border_gray"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bengkel1"
+                    android:layout_weight="0.1"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bintang Automotive"
+                            android:textColor="#F8B528"
+                            android:textSize="18dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:text="0.7km"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="4.9 (2K+)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:text="Jl. Bintang No 66J, Medan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Popular Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp" />
+
+            <!-- Popular Item 1 -->
+            <LinearLayout
+                android:id="@+id/layout_auto7000"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp"
+                android:layout_marginBottom="4dp"
+                android:paddingTop="16dp"
+                android:background="@drawable/btn_white_border_gray"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bengkel2"
+                    android:layout_weight="0.1"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto7000"
+                            android:textColor="#F8B528"
+                            android:textSize="18dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:text="1.6km"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="5.0 (7K+)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:text="Jl. Thamrin No 36F, Medan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Popular Item 2 -->
+            <LinearLayout
+                android:id="@+id/layout_ron"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:background="@drawable/btn_white_border_gray"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bengkel3"
+                    android:layout_weight="0.1"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RON ENGINE"
+                            android:textColor="#F8B528"
+                            android:textSize="18dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:text="3.5km"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="4.9 (3.2K+)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:text="Jl. Asia No 88K, Medan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
