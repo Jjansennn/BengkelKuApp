@@ -54,6 +54,10 @@
         <action
             android:id="@+id/action_statusFragment_to_statusDetailFragment"
             app:destination="@id/navigation_status_detail" />
+        <!-- ✅ Tambahkan action ke MessageFragment -->
+        <action
+            android:id="@+id/action_statusFragment_to_messageFragment"
+            app:destination="@id/navigation_message" />
     </fragment>
 
     <!-- Status Detail Fragment -->
@@ -105,4 +109,22 @@
         android:name="com.example.bengkelkuapp.ui.GarageDetailFragment"
         android:label="Garage Detail"
         tools:layout="@layout/fragment_garage_detail" />
+
+    <!-- Message Fragment -->
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.example.bengkelkuapp.MessageFragment"
+        android:label="Message"
+        tools:layout="@layout/fragment_message">
+        <action
+            android:id="@+id/action_messageFragment_to_chatFragment"
+            app:destination="@id/navigation_chat" />
+    </fragment>
+
+    <!-- Chat Fragment -->
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.bengkelkuapp.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

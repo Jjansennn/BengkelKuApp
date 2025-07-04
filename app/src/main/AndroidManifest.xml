@@ -6,6 +6,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"
         android:theme="@style/Theme.BengkelKuApp"
         android:dataExtractionRules="@xml/data_extraction_rules"
