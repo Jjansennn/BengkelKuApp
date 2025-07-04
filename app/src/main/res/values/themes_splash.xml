@@ -3,9 +3,9 @@
 
     <!-- Tema khusus untuk splash screen -->
     <style name="Theme.BengkelKuApp.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/logo</item>
-        <item name="android:statusBarColor" tools:targetApi="l">#000000</item>
-        <item name="android:navigationBarColor" tools:targetApi="l">#000000</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>
