@@ -10,43 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bengkelkuapp.R;
+import com.example.bengkelkuapp.adapter.GarageAdapter;
+import com.example.bengkelkuapp.model.CarItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GarageFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-
-    public GarageFragment() {
-        // Required empty public constructor
-    }
-
-    public static GarageFragment newInstance(String param1, String param2) {
-        GarageFragment fragment = new GarageFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public GarageFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_garage, container, false);
     }
 
@@ -56,9 +36,24 @@ public class GarageFragment extends Fragment {
 
         ImageView btnBack = view.findViewById(R.id.btn_back);
         if (btnBack != null) {
-            btnBack.setOnClickListener(v -> {
-                Navigation.findNavController(v).navigateUp(); // Navigasi kembali
-            });
+            btnBack.setOnClickListener(v -> Navigation.findNavController(v).navigateUp());
         }
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewGarage);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        List<CarItem> carList = new ArrayList<>();
+        carList.add(new CarItem("Hyundai", "Creta N Line", "2025", "BK 1457 AEK", R.drawable.creta));
+        carList.add(new CarItem("Hyundai", "Kona Electric", "2024", "BK 2468 ZY", R.drawable.konaelectric));
+        carList.add(new CarItem("Hyundai", "Cayman Turbo", "2023", "BK 1947 JZ", R.drawable.cayman));
+
+        GarageAdapter adapter = new GarageAdapter(carList, (carItem, position) -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("carList", new ArrayList<>(carList));
+            bundle.putInt("position", position);
+            Navigation.findNavController(view).navigate(R.id.action_garageFragment_to_garageDetailFragment, bundle);
+        });
+
+        recyclerView.setAdapter(adapter);
     }
 }

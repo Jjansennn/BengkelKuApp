@@ -63,25 +63,61 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="● In Use"
                     android:textColor="#F5A623"
-                    android:textSize="12sp"
-                    android:layout_marginBottom="8dp" />
+                    android:textSize="12sp" />
 
                 <!-- Car Image -->
                 <ImageView
+                    android:id="@+id/iv_car_detail"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/creta" />
 
+                <TextView
+                    android:id="@+id/tv_model_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creta N Line"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_brand_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hyundai"
+                    android:textColor="#888888"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_year_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2025"
+                    android:textColor="#888888"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_plate_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BK 1457 AEK"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+
                 <!-- Car Info -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="16dp">
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -93,49 +129,49 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Creta N Line"
-                            android:textStyle="bold"
+                            android:textColor="#000000"
                             android:textSize="18sp"
-                            android:textColor="#000000" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hyundai • 2025"
-                            android:textSize="14sp"
-                            android:textColor="#888888" />
+                            android:textColor="#888888"
+                            android:textSize="14sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/logohyundai"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logohyundai" />
                 </LinearLayout>
 
                 <!-- Car Category -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CAR"
-                    android:textColor="@android:color/white"
+                    android:layout_marginTop="12dp"
                     android:background="@drawable/bg_chip_orange"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="4dp"
-                    android:textSize="12sp"
-                    android:layout_marginTop="12dp" />
+                    android:text="CAR"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
 
                 <!-- Repairs Summary -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="12dp"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:background="@drawable/bg_stat_box"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -151,9 +187,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3"
-                            android:textStyle="bold"
+                            android:textColor="#000000"
                             android:textSize="16sp"
-                            android:textColor="#000000" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <View
@@ -162,8 +198,8 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:background="@drawable/bg_stat_box"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -179,9 +215,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Rp 6.200.000"
-                            android:textStyle="bold"
+                            android:textColor="#000000"
                             android:textSize="16sp"
-                            android:textColor="#000000" />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -189,25 +225,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Latest Repairs"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
                     android:layout_marginTop="16dp"
-                    android:textColor="#000000" />
+                    android:text="Latest Repairs"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/bg_stat_box"
-                    android:padding="12dp"
                     android:layout_marginTop="8dp"
-                    android:gravity="center_vertical">
+                    android:background="@drawable/bg_stat_box"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
@@ -222,55 +258,57 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Type : Brake"
-                            android:textSize="12sp"
-                            android:textColor="#888888" />
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cost : Rp 1.200.000"
-                            android:textSize="12sp"
-                            android:textColor="#888888" />
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Date : 12 April 2025"
-                            android:textSize="12sp"
-                            android:textColor="#888888" />
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         android:layout_marginStart="8dp"
-                        android:src="@drawable/bengkel1"
+                        android:background="@drawable/bg_card_rounded"
                         android:scaleType="centerCrop"
-                        android:background="@drawable/bg_card_rounded" />
+                        android:src="@drawable/bengkel1" />
                 </LinearLayout>
 
                 <!-- Navigation Buttons -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="16dp"
+                    android:gravity="center">
 
                     <ImageView
+                        android:id="@+id/previous"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_chevron_left"
-                        android:contentDescription="Previous" />
+                        android:contentDescription="Previous"
+                        android:src="@drawable/ic_chevron_left" />
 
                     <View
                         android:layout_width="32dp"
                         android:layout_height="1dp" />
 
                     <ImageView
+                        android:id="@+id/next"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_chevron_right"
-                        android:contentDescription="Next" />
+                        android:contentDescription="Next"
+                        android:src="@drawable/ic_chevron_right" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
