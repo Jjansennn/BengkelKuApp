@@ -5,12 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.bengkelkuapp.R;
 
@@ -54,13 +56,29 @@ public class WorkshopDetailsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Temukan tombol Book di layout
-        Button bookButton = view.findViewById(R.id.btn_book_now);
+        NavController navController = Navigation.findNavController(view);
 
-        // Saat tombol diklik, navigasi ke BookingFragment
+        // Tombol Book
+        Button bookButton = view.findViewById(R.id.btn_book_now);
         bookButton.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_workshopDetailsFragment_to_bookingFragment);
         });
+
+        // Tombol Back ke WorkshopFragment
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> {
+                navController.navigate(R.id.navigation_workshop);
+            });
+        }
+
+        // Tombol Message ke MessageFragment
+        Button btnMessage = view.findViewById(R.id.btnMessage);
+        if (btnMessage != null) {
+            btnMessage.setOnClickListener(v -> {
+                navController.navigate(R.id.navigation_message);
+            });
+        }
     }
+
 }

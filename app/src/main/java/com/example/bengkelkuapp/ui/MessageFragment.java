@@ -1,4 +1,4 @@
-package com.example.bengkelkuapp;
+package com.example.bengkelkuapp.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.bengkelkuapp.R;
 
 public class MessageFragment extends Fragment {
 
@@ -28,13 +30,21 @@ public class MessageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // 🔗 Inisialisasi idRonaldo
+        // Navigasi ke ChatFragment saat idRonaldo diklik
         LinearLayout idRonaldo = view.findViewById(R.id.idRonaldo);
-
-        // ⏩ Navigasi ke ChatFragment saat diklik
         idRonaldo.setOnClickListener(v -> {
             NavHostFragment.findNavController(this)
                     .navigate(R.id.action_messageFragment_to_chatFragment);
         });
+
+        // Tombol back
+        View btnBack = view.findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> {
+                NavHostFragment.findNavController(this)
+                        .navigate(R.id.navigation_status);
+            });
+        }
     }
+
 }

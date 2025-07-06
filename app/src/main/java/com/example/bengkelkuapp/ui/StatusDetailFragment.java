@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -30,12 +31,19 @@ public class StatusDetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Navigasi dari LinearLayout repair ke StatusFragment
         LinearLayout repairLayout = view.findViewById(R.id.repair);
         if (repairLayout != null) {
             repairLayout.setOnClickListener(v ->
                     Navigation.findNavController(view).navigate(R.id.action_statusDetailFragment_to_statusFragment)
             );
         }
+
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v ->
+                    Navigation.findNavController(view).navigate(R.id.action_statusDetailFragment_to_homeFragment)
+            );
+        }
     }
+
 }

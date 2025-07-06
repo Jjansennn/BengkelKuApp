@@ -44,17 +44,20 @@ public class StatusFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate layout
         View view = inflater.inflate(R.layout.fragment_status, container, false);
 
-        // Ambil referensi ke ImageView chat
+        // Navigasi ke MessageFragment saat ikon chat ditekan
         ImageView icnChat = view.findViewById(R.id.icncht);
-
-        // Set klik listener
         icnChat.setOnClickListener(v -> {
-            // Navigasi ke MessageFragment
             NavHostFragment.findNavController(StatusFragment.this)
                     .navigate(R.id.action_statusFragment_to_messageFragment);
+        });
+
+        // Tombol back ke StatusDetailFragment
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            NavHostFragment.findNavController(StatusFragment.this)
+                    .navigate(R.id.action_statusFragment_to_statusDetailFragment);
         });
 
         return view;

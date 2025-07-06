@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -47,7 +48,6 @@ public class WorkshopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout
         return inflater.inflate(R.layout.fragment_workshop, container, false);
     }
 
@@ -55,13 +55,20 @@ public class WorkshopFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Temukan layout item "Bintang Automotive"
-        LinearLayout layoutBintang = view.findViewById(R.id.layout_bintang_automotive);
+        NavController navController = Navigation.findNavController(view);
 
-        // Tambahkan aksi klik untuk navigasi ke WorkshopDetailFragment
-        layoutBintang.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_workshopFragment_to_workshopDetailFragment);
-        });
+        // Navigasi ke detail workshop
+        LinearLayout layoutBintang = view.findViewById(R.id.layout_bintang_automotive);
+        layoutBintang.setOnClickListener(v ->
+                navController.navigate(R.id.action_workshopFragment_to_workshopDetailFragment)
+        );
+
+        // Tombol back ke HomeFragment
+        ImageView backArrow = view.findViewById(R.id.btnBack);
+        if (backArrow != null) {
+            backArrow.setOnClickListener(v ->
+                    Navigation.findNavController(view).navigate(R.id.navigation_home)
+            );
+        }
     }
 }

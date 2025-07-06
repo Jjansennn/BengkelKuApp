@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_workshopFragment_to_workshopDetailFragment"
             app:destination="@id/navigation_workshop_detail" />
+        <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
     <!-- Workshop Detail Fragment -->
@@ -50,6 +53,13 @@
         <action
             android:id="@+id/action_workshopDetailsFragment_to_bookingFragment"
             app:destination="@id/navigation_booking" />
+        <action
+            android:id="@+id/action_workshopDetailFragment_to_workshopFragment"
+            app:destination="@id/navigation_workshop" />
+        <action
+            android:id="@+id/action_workshopDetailsFragment_to_messageFragment"
+            app:destination="@id/navigation_message" />
+
     </fragment>
 
     <!-- Booking Fragment -->
@@ -61,6 +71,9 @@
         <action
             android:id="@+id/action_bookingFragment_to_bookingConfirmFragment"
             app:destination="@id/navigation_booking_confirm" />
+        <action
+            android:id="@+id/action_bookingFragment_to_workshopDetailsFragment"
+            app:destination="@id/navigation_workshop_detail" />
     </fragment>
 
     <!-- Booking Confirm Fragment -->
@@ -93,6 +106,11 @@
         <action
             android:id="@+id/action_statusDetailFragment_to_statusFragment"
             app:destination="@id/navigation_status" />
+        <action
+            android:id="@+id/action_statusDetailFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
+
+
     </fragment>
 
     <!-- Profile Fragment -->
@@ -114,7 +132,13 @@
         android:id="@+id/navigation_profile_user"
         android:name="com.example.bengkelkuapp.ui.ProfileUserFragment"
         android:label="Profile User"
-        tools:layout="@layout/fragment_profile_user" />
+        tools:layout="@layout/fragment_profile_user">
+
+        <action
+            android:id="@+id/action_profileUser_to_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
 
     <!-- Garage Fragment -->
     <fragment
@@ -137,7 +161,7 @@
     <!-- Message Fragment -->
     <fragment
         android:id="@+id/navigation_message"
-        android:name="com.example.bengkelkuapp.MessageFragment"
+        android:name="com.example.bengkelkuapp.ui.MessageFragment"
         android:label="Message"
         tools:layout="@layout/fragment_message">
         <action
@@ -148,7 +172,7 @@
     <!-- Chat Fragment -->
     <fragment
         android:id="@+id/navigation_chat"
-        android:name="com.example.bengkelkuapp.ChatFragment"
+        android:name="com.example.bengkelkuapp.ui.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
 

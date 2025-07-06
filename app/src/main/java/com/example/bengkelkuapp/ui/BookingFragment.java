@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.bengkelkuapp.R;
 
@@ -58,6 +60,12 @@ public class BookingFragment extends Fragment {
         Button btnCancel = view.findViewById(R.id.btn_cancel);
         btnCancel.setOnClickListener(v -> {
             Navigation.findNavController(view).popBackStack(); // Back ke sebelumnya
+        });
+
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            NavHostFragment.findNavController(BookingFragment.this)
+                    .navigate(R.id.action_bookingFragment_to_workshopDetailsFragment);
         });
 
         return view;
