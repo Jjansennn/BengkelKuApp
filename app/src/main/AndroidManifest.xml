@@ -4,6 +4,7 @@
     package="com.example.bengkelkuapp">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
@@ -14,40 +15,25 @@
         android:fullBackupContent="@xml/backup_rules"
         tools:targetApi="33">
 
-        <!-- SplashActivity bukan lagi activity launcher -->
+        <!-- Activities -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.BengkelKuApp.Splash"
             android:exported="true"
-            android:windowSoftInputMode="adjustNothing"
-            tools:remove="android:windowDisablePreview" />
-
-
-        <!-- LandingActivity sebagai LAUNCHER utama -->
-        <activity
-            android:name=".LandingActivity"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:theme="@style/Theme.BengkelKuApp.Splash">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- Aktivitas utama lainnya -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VerificationActivity"
-            android:exported="false" />
+        <activity android:name=".LandingActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".VerificationActivity"/>
+
     </application>
+
+
 
 </manifest>

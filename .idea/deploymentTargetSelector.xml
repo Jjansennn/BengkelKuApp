@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-07-04T10:48:46.749281700Z">
+        <DropdownSelection timestamp="2025-07-07T16:56:38.081762900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\janse\.android\avd\avd_Pixel_8_Pro_23SI2.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\janse\.android\avd\Medium_Phone.avd" />
             </handle>
           </Target>
         </DropdownSelection>

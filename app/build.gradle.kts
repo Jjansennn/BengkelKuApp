@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
 }
+apply(plugin = "realm-android")
 
 android {
     namespace = "com.example.bengkelkuapp"
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.bengkelkuapp"
-        minSdk = 28
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -35,7 +36,7 @@ android {
 }
 
 dependencies {
-
+    implementation("io.realm:realm-android-library:10.15.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)

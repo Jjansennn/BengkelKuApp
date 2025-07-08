@@ -7,19 +7,18 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Tampilkan layout splash
         setContentView(R.layout.activity_splash);
+
+        // Delay 2 detik lalu pindah ke LandingActivity
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        }, 10);
-
-        startActivity(new Intent(this, LandingActivity.class));
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out); // 👈 transisi halus
-        finish();
-
+            startActivity(new Intent(SplashActivity.this, LandingActivity.class));
+            finish(); // Supaya tidak bisa balik ke splash pakai tombol back
+        }, 2000); // 2000 ms = 2 detik
     }
 }
-
