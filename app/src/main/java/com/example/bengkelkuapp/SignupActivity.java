@@ -125,6 +125,4 @@ public class SignupActivity extends AppCompatActivity {
             realm.close();
         }
     }
-
-
 }
