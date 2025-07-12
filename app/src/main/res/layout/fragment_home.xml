@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/txvNama"
                     android:text="Jansen"
                     android:textSize="18sp"
                     android:textStyle="bold"

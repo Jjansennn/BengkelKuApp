@@ -74,7 +74,7 @@
             </ImageView>
 
             <TextView
-                android:id="@+id/Nama"
+                android:id="@+id/txvNama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="139dp"
@@ -109,11 +109,11 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/txvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jansen@gmail.com"
                     android:textSize="12dp">
-
                 </TextView>
 
             </LinearLayout>
@@ -142,6 +142,7 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/txvNama2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jansen"
@@ -175,6 +176,7 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/txvGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"
@@ -208,6 +210,7 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/txvPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="********"

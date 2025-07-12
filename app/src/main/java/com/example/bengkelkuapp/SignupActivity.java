@@ -34,6 +34,7 @@ public class SignupActivity extends AppCompatActivity {
 
         if (getSupportActionBar() != null) getSupportActionBar().hide();
 
+        Realm.init(this);
         realm = Realm.getDefaultInstance();
 
         // Inisialisasi View
@@ -54,7 +55,6 @@ public class SignupActivity extends AppCompatActivity {
         btnSignup.setOnClickListener(v -> registerUser());
 
         Log.d("DEBUG", "Total user: " + realm.where(User.class).findAll().size());
-
     }
 
     private void registerUser() {
@@ -98,13 +98,18 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        // Simpan user
+        // Ambil nama default dari email (sebelum @)
+        String namaDefault = email.split("@")[0];
+
+        // Simpan user baru ke Realm
         realm.executeTransaction(r -> {
             User user = r.createObject(User.class, email);
             user.setPhone(phone);
             user.setPassword(password);
+            user.setNama(namaDefault); // simpan nama default
         });
 
+        // Simpan session email ke SharedPreferences
         SharedPreferences prefs = getSharedPreferences("userSession", MODE_PRIVATE);
         prefs.edit().putString("email", email).apply();
 
@@ -112,7 +117,7 @@ public class SignupActivity extends AppCompatActivity {
         Log.d("DEBUG", "User tersimpan: " + email);
         Log.d("DEBUG", "Total user: " + realm.where(User.class).findAll().size());
 
-
+        // Arahkan ke halaman verifikasi
         Intent intent = new Intent(SignupActivity.this, VerificationActivity.class);
         startActivity(intent);
         finish();
