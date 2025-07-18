@@ -169,7 +169,7 @@
                     android:id="@+id/edt3"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:layout_marginLeft="227dp"
+                    android:layout_marginLeft="206dp"
                     android:background="@drawable/pencil">
 
                 </ImageView>
@@ -178,7 +178,7 @@
                     android:id="@+id/txvGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"
+                    android:text="Laki-Laki"
                     android:textSize="12dp">
 
                 </TextView>
