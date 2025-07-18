@@ -37,6 +37,7 @@ android {
 
 dependencies {
     implementation("io.realm:realm-android-library:10.15.1")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
