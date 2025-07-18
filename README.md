@@ -6,7 +6,7 @@
 <a href="" target="blank">
 </a>
 
-<h2> 🚗 BengkelkuApp</h2>
+<h2> 🚗 Bengkelku App</h2>
 
 <img src="./assets/logo.png" width="80%">
 
